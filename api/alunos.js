@@ -9,11 +9,7 @@ const alunosFile = require("../files/alunos");
  */
 router.get("/", function (req, res) {
   try {
-    res.json({
-      status: 200,
-      message: "Alunos list data successful",
-      data: alunosFile,
-    });
+    res.json(alunosFile);
   } catch (err) {
     console.error(err);
     return res.status(500).send({ message: "Alunos list data failed" });

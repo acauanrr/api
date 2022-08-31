@@ -7,7 +7,7 @@ app.use(express.json({ extended: false }));
 /**
  * API Endpoints
  */
-app.use("/api/alunos", alunos);
+app.use("/alunos", alunos);
 
 /**
  * Index Page
@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
     `<h1>API PAGE - Prof. Acauan Ribeiro</h1>
     <h3>Lista de APIs válidas:</h3>
     <ul>
-      <li><a href="${baseUrl}/api/alunos">${baseUrl}/api/alunos</a> &emsp; | &emsp; JSON com lista de alunos de exemplo </li>
+      <li><a href="${baseUrl}/alunos">/alunos</a> &emsp; | &emsp; JSON com lista de alunos de exemplo </li>
     </ul>
     `
   );
