@@ -1,11 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const alunos = [
-  { id: 1, name: "José da Silva", age: 28, location: "Boa Vista/RR" },
-  { id: 2, name: "Maria Auxiliadora", age: 45, location: "Muacajaí/RR" },
-  { id: 3, name: "Mario de Andrade", age: 22, location: "Baliza/RR" },
-];
+// From json file
+const alunosFile = require("../files/alunos");
 
 /**
  * GET alunos list
@@ -15,7 +12,7 @@ router.get("/", function (req, res) {
     res.json({
       status: 200,
       message: "Alunos list data successful",
-      data: alunos,
+      data: alunosFile,
     });
   } catch (err) {
     console.error(err);

@@ -4,6 +4,9 @@ const alunos = require("./api/alunos");
 
 app.use(express.json({ extended: false }));
 
+/**
+ * API Endpoints
+ */
 app.use("/api/alunos", alunos);
 
 /**
@@ -12,10 +15,10 @@ app.use("/api/alunos", alunos);
 app.get("/", (req, res) => {
   const baseUrl = `${req.protocol}://${req.headers.host}`;
   res.send(
-    `<h1>API PAGE - of Prof. Acauan Ribeiro</h1> <br/>
-    <h2>Lista de APIs válidas</h2> <br/>
+    `<h1>API PAGE - Prof. Acauan Ribeiro</h1>
+    <h3>Lista de APIs válidas:</h3>
     <ul>
-      <li>'${baseUrl}/api/alunos'    |   return 'Json com lista de alunos de exemplo' </li>
+      <li><a href="${baseUrl}/api/alunos">${baseUrl}/api/alunos</a> &emsp; | &emsp; JSON com lista de alunos de exemplo </li>
     </ul>
     `
   );
