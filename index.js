@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
     `<h1>API PAGE - Prof. Acauan Ribeiro</h1>
     <h3>Lista de APIs válidas:</h3>
     <ul>
-      <li><a href="${baseUrl}/alunos">/alunos</a> &emsp; | &emsp; JSON com lista de alunos de exemplo </li>
+      <li><a href="${baseUrl}/alunos">/alunos</a> &emsp; | &emsp; JSON com lista de alunos de exemplo | &emsp; (7 registros)</li>
     </ul>
     `
   );
