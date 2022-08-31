@@ -10,11 +10,12 @@ app.use("/api/alunos", alunos);
  * Index Page
  */
 app.get("/", (req, res) => {
+  const baseUrl = `${req.protocol}://${req.headers.host}`;
   res.send(
     `<h1>API PAGE - of Prof. Acauan Ribeiro</h1> <br/>
     <h2>Lista de APIs válidas</h2> <br/>
     <ul>
-      <li>'${window.location.href}/api/alunos'    |   return 'Json com lista de alunos de exemplo' </li>
+      <li>'${baseUrl}/api/alunos'    |   return 'Json com lista de alunos de exemplo' </li>
     </ul>
     `
   );
